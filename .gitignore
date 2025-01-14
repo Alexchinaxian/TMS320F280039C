@@ -1,0 +1,14 @@
+#忽略过程文件
+*.crf
+*.d
+*.o
+*.bulid_log
+*hex
+*lnp
+*dep
+*.uvoptx
+*.uvprojx
+*.map
+*.lst
+*.obj
+*.mk
