@@ -12,3 +12,7 @@
 *.lst
 *.obj
 *.mk
+*.out
+*.xml
+*.opt
+/Debug/

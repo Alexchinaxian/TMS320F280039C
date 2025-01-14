@@ -73,8 +73,8 @@ ORDERED_OBJS += \
 "../library/rts2800_fpu32_fast_supplement_eabi.lib" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
--l"C:/Users/alexw/Desktop/DSP_Code/TMS39C/library/rts2800_fpu32_eabi.lib" \
--l"C:/Users/alexw/Desktop/DSP_Code/TMS39C/library/rts2800_fpu32_fast_supplement_eabi.lib" \
+-l"C:/Users/alexw/Desktop/TMS320F280039C/library/rts2800_fpu32_eabi.lib" \
+-l"C:/Users/alexw/Desktop/TMS320F280039C/library/rts2800_fpu32_fast_supplement_eabi.lib" \
 
 -include ../makefile.init
 
@@ -205,7 +205,7 @@ all: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 TMS39C.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 	@echo 'Building target: "$@"'
 	@echo 'Invoking: C2000 Linker'
-	"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcrc --preinclude="C:/Users/alexw/Desktop/DSP_Code/TMS39C/Driver/inc/f28003x_device.h" -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"TMS39C.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TMS39C_linkInfo.xml" --rom_model -o "TMS39C.out" $(ORDERED_OBJS)
+	"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/bin/cl2000" -v28 -ml -mt --cla_support=cla2 --float_support=fpu32 --tmu_support=tmu0 --vcu_support=vcrc --preinclude="C:/Users/alexw/Desktop/TMS320F280039C/Driver/inc/f28003x_device.h" -g --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi -z -m"TMS39C.map" --stack_size=0x200 --warn_sections -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/lib" -i"C:/ti/ccs1271/ccs/tools/compiler/ti-cgt-c2000_22.6.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="TMS39C_linkInfo.xml" --rom_model -o "TMS39C.out" $(ORDERED_OBJS)
 	@echo 'Finished building target: "$@"'
 	@echo ' '
 
